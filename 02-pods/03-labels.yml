@@ -1,13 +1,14 @@
 apiVersion: v1
-kind: Namespace
+kind: Pod
 metadata:
- name: label-demo
- labels:
-  course: Devops
-  Trainer: Pavan
+  name: label-demo
+  labels:
+    course: DevOps
+    Trainer: "pavan"
 spec:
- containers:
-  - name: hello-label
+  # list of containers
+  containers:
+  - name: hello-pod
     image: nginx
     ports:
-    - containerport: 80
+    - containerPort: 80
