@@ -10,7 +10,7 @@ spec:
   csi:
     driver: ebs.csi.aws.com
     fsType: ext4
-    volumeHandle: vol-0e6591a6271d3125c
+    volumeHandle: vol-042daf9c1329642bc # replace with your volume id
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -39,7 +39,7 @@ spec:
     - name: nginx-data
       mountPath: /usr/share/nginx/html
   nodeSelector:
-    zone: 1f
+    zone: 1a
   volumes:
   - name: nginx-data
     persistentVolumeClaim:
