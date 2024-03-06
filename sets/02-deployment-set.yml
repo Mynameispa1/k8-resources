@@ -22,3 +22,17 @@ spec:
         image: nginx
         ports:
         - containerPort: 80 # pod definition end
+---
+apiVersion: v1
+kind: Service
+metadata:
+ name: nginx-service
+spec:
+ selector: #selcetor is the key word to recall the labels
+  app: nginx
+  demo: service
+ ports:
+  - protocol: TCP
+    port: 80 #service port
+    targetPort: 80 #container port
+    #nodePort: 34000 we can open the required port
