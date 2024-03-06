@@ -30,7 +30,7 @@ metadata:
 spec:
  selector: #selcetor is the key word to recall the labels
   app: nginx
-  demo: service
+  demo: deployment
  ports:
   - protocol: TCP
     port: 80 #service port
