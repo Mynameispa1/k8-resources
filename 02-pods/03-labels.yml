@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+ name: label-demo
+ labels:
+  course: Devops
+  Trainer: Pavan
+spec:
+ containers:
+  - name: hello-label
+    image: nginx
+    ports:
+    - containerport: 80

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: multi-container
+spec:
+  containers:
+  # list of containers
+  - name: nginx
+    image: nginx # nginx is the default image, hence will pick from dockerhub
+    ports:
+    - containerPort: 80
+  - name: almalinux
+    image: almalinux:8
+    command: ["sleep", "300"] 
