@@ -9,10 +9,12 @@ spec:
     image: nginx # nginx is the default image, hence will pick/pull from dockerhub
     ports:
     - containerPort: 80
-    resources:
+    resources:   #we can restrict the resources consumed by containers...  This is the advantage in kubernetes 
       requests:
         cpu: "100m"
         memory: "68Mi"
       limits:
         cpu: "200m"
         memory: "128Mi"
+
+      
