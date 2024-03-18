@@ -11,8 +11,8 @@ spec:
     image: nginx # nginx is the default image, hence will pick/pull from dockerhub
     ports:
     - containerPort: 80
----
 
+---
 apiVersion: v1
 kind: Service
 metadata:

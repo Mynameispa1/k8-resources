@@ -7,7 +7,7 @@ spec:
   containers:
   - name: config-pod
     image: nginx
-    #here with this line port will not be opened, just for information
+    #here with this line port will not be opened, just for information.
     ports:
     - containerPort: 80
     env:
@@ -37,3 +37,5 @@ spec:
     envFrom:
     - configMapRef:
         name: devops-config
+
+# In first pod we used env and if we have like multiple values to refer the code will increase. So in second pod we mention envFrom and mentioned config name....       
